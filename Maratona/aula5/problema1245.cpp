@@ -5,6 +5,7 @@ using namespace std;
 int main() {
     int n, M, pares;
     char L;
+	//tamanho, quantos desse tamanho tem
     map<int, int> esquerdo, direito;
 
     while (cin >> n) {
@@ -21,8 +22,8 @@ int main() {
         }
 		
         for (auto it = esquerdo.begin(); it != esquerdo.end(); ++it) {
-            int tamanho = it->first;
-            int quantidade_esquerda = it->second;
+            int tamanho = it->first; //primeiro item do map
+            int quantidade_esquerda = it->second; //segundo item do map
 
             if (direito.find(tamanho) != direito.end()) {
                 int quantidade_direita = direito[tamanho];
